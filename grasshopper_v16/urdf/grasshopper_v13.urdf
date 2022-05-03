@@ -1,0 +1,1382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+
+<robot
+  name="grasshopper_v13">
+
+  <link
+    name="body">
+    <inertial>
+      <origin
+        xyz="0.0162798117739403 3.78348961987269E-10 0.0150499622323733"
+        rpy="0 0 0" />
+      <mass
+        value="0.0567999899161868" />
+      <inertia
+        ixx="5.6329195694914E-07"
+        ixy="-7.75239353540952E-14"
+        ixz="-5.49628943640699E-07"
+        iyy="4.41406008500027E-06"
+        iyz="-1.06597447552425E-13"
+        izz="4.26268622743885E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://grasshopper_v13/meshes/body.STL" />
+      </geometry>
+      <material
+        name="yellow">
+        <color
+          rgba="1 1 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://grasshopper_v13/meshes/body.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link
+    name="lrt">
+    <inertial>
+      <origin
+        xyz="0.0261286982370065 8.67361737988404E-18 0.00402879306534778"
+        rpy="0 0 0" />
+      <mass
+        value="0.00102510748433604" />
+      <inertia
+        ixx="2.75870829148051E-08"
+        ixy="-1.01129001055553E-22"
+        ixz="6.37268406114648E-10"
+        iyy="3.79932578337789E-07"
+        iyz="1.87046785548643E-24"
+        izz="3.96599014649716E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://grasshopper_v13/meshes/lrt.STL" />
+      </geometry>
+      <material
+        name="blue">
+        <color
+          rgba="0 0 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://grasshopper_v13/meshes/lrt.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint
+    name="lrt"
+    type="revolute">
+    <origin
+      xyz="0.00150000000000005 0.0119999999999999 0.00500000000000001"
+      rpy="1.5707963267949 0 3.14159265358979" />
+    <parent
+      link="body" />
+    <child
+      link="lrt" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="1.5708"
+      effort="10000"
+      velocity="10000" />
+  </joint>
+
+  <link
+    name="lrc">
+    <inertial>
+      <origin
+        xyz="0.00392175874866642 0.00250001345400112 0.0309242354329563"
+        rpy="0 0 0" />
+      <mass
+        value="0.000112847642201865" />
+      <inertia
+        ixx="3.91905503653371E-08"
+        ixy="2.18786057411163E-15"
+        ixz="-2.72935401195661E-10"
+        iyy="3.92148332472704E-08"
+        iyz="1.73601369061024E-14"
+        izz="2.50917852887818E-10" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://grasshopper_v13/meshes/lrc.STL" />
+      </geometry>
+      <material
+        name="red">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://grasshopper_v13/meshes/lrc.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint
+    name="lrc"
+    type="revolute">
+    <origin
+      xyz="0.075 0 0.00149999999999998"
+      rpy="1.5707963267949 0 1.50753487154835" />
+    <parent
+      link="lrt" />
+    <child
+      link="lrc" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-2.906"
+      upper="0"
+      effort="10000"
+      velocity="10000" />
+  </joint>
+
+  <link
+    name="lrf">
+    <inertial>
+      <origin
+        xyz="-3.46944695195361E-18 0 -0.000461910618212852"
+        rpy="0 0 0" />
+      <mass
+        value="0.000139426648488346" />
+      <inertia
+        ixx="6.73294093383946E-10"
+        ixy="1.60086014396752E-26"
+        ixz="2.03563978870472E-25"
+        iyy="6.73294093383946E-10"
+        iyz="6.06662160817497E-28"
+        izz="8.02301277928669E-10" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://grasshopper_v13/meshes/lrf.STL" />
+      </geometry>
+      <material
+        name="cyan">
+        <color
+          rgba="0 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://grasshopper_v13/meshes/lrf.STL" />
+      </geometry>
+    </collision>
+    <contact>
+      <friction_anchor/>
+      <stiffness value="3000.0"/>
+      <damping value="100.0"/>
+      <spinning_friction value=".3"/>
+      <lateral_friction value="1"/>
+    </contact>
+  </link>
+
+  <joint
+    name="lrf"
+    type="fixed">
+    <origin
+      xyz="0.0040141850277134 0.00250000000000002 0.0633692134386507"
+      rpy="-3.14159265358979 0 3.14159265358979" />
+    <parent
+      link="lrc" />
+    <child
+      link="lrf" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+  <link
+    name="lmj">
+    <inertial>
+      <origin
+        xyz="0 -7.74711234625101E-06 0.0020000799283311"
+        rpy="0 0 0" />
+      <mass
+        value="1.34653649071667E-05" />
+      <inertia
+        ixx="5.52644557593085E-11"
+        ixy="-5.60002588478623E-27"
+        ixz="-1.03052982943993E-27"
+        iyy="5.2602514824496E-11"
+        iyz="3.2237202837321E-15"
+        izz="7.20520299010003E-11" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://grasshopper_v13/meshes/lmj.STL" />
+      </geometry>
+      <material
+        name="green">
+        <color
+          rgba="0 1 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://grasshopper_v13/meshes/lmj.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint
+    name="lmj"
+    type="revolute">
+    <origin
+      xyz="0.0195000000000001 0.0124999999999999 0.003"
+      rpy="0 0 3.14159265358979" />
+    <parent
+      link="body" />
+    <child
+      link="lmj" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.3963"
+      upper="0.95993"
+      effort="10000"
+      velocity="10000" />
+  </joint>
+
+  <link
+    name="lmt">
+    <inertial>
+      <origin
+        xyz="1.17369587174232E-08 -0.00371957814414213 0.0127870738369718"
+        rpy="0 0 0" />
+      <mass
+        value="3.66110273362852E-05" />
+      <inertia
+        ixx="2.14579823191614E-09"
+        ixy="-5.09767459957524E-16"
+        ixz="1.98141479310946E-15"
+        iyy="2.14027534320085E-09"
+        iyz="4.42338956091424E-11"
+        izz="6.85266000169759E-11" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://grasshopper_v13/meshes/lmt.STL" />
+      </geometry>
+      <material
+        name="blue">
+        <color
+          rgba="0 0 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://grasshopper_v13/meshes/lmt.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint
+    name="lmt"
+    type="revolute">
+    <origin
+      xyz="0 -0.0035 0.002"
+      rpy="1.43394443199086 0 0" />
+    <parent
+      link="lmj" />
+    <child
+      link="lmt" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-1.5708"
+      upper="0"
+      effort="10000"
+      velocity="10000" />
+  </joint>
+
+  <link
+    name="lmc">
+    <inertial>
+      <origin
+        xyz="0.00352224660212594 2.1680636799748E-10 0.0123365587699098"
+        rpy="0 0 0" />
+      <mass
+        value="3.5661712321329E-05" />
+      <inertia
+        ixx="1.90974195045752E-09"
+        ixy="6.36553242537407E-17"
+        ixz="-2.0946484230682E-11"
+        iyy="1.91637355644094E-09"
+        iyz="8.08804799424577E-17"
+        izz="6.29888137193371E-11" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://grasshopper_v13/meshes/lmc.STL" />
+      </geometry>
+      <material
+        name="red">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://grasshopper_v13/meshes/lmc.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint
+    name="lmc"
+    type="revolute">
+    <origin
+      xyz="0 -0.0038382 0.027871"
+      rpy="0 -0.27932 1.5708" />
+    <parent
+      link="lmt" />
+    <child
+      link="lmc" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-2.7838"
+      upper="0"
+      effort="10000"
+      velocity="10000" />
+  </joint>
+
+  <link
+    name="lmf">
+    <inertial>
+      <origin
+        xyz="-3.46944695195361E-18 -1.73472347597681E-18 -0.000369435002616075"
+        rpy="0 0 0" />
+      <mass
+        value="0.000146440131734425" />
+      <inertia
+        ixx="7.15922484169963E-10"
+        ixy="2.58493941422821E-26"
+        ixz="9.04728794979874E-26"
+        iyy="7.15922484169963E-10"
+        iyz="3.87740912134232E-26"
+        izz="8.27670524201034E-10" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://grasshopper_v13/meshes/lmf.STL" />
+      </geometry>
+      <material
+        name="cyan">
+        <color
+          rgba="0 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://grasshopper_v13/meshes/lmf.STL" />
+      </geometry>
+    </collision>
+    <contact>
+      <friction_anchor/>
+      <stiffness value="3000.0"/>
+      <damping value="100.0"/>
+      <spinning_friction value=".3"/>
+      <lateral_friction value="1"/>
+    </contact>
+  </link>
+
+  <joint
+    name="lmf"
+    type="fixed">
+    <origin
+      xyz="0.0035847 0 0.024991"
+      rpy="-3.1416 0 0.48945" />
+    <parent
+      link="lmc" />
+    <child
+      link="lmf" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+  <link
+    name="lfj">
+    <inertial>
+      <origin
+        xyz="-1.38777878078145E-17 -7.74711234624928E-06 0.0020000799283311"
+        rpy="0 0 0" />
+      <mass
+        value="1.34653649071667E-05" />
+      <inertia
+        ixx="5.52644557593085E-11"
+        ixy="-3.96899484918308E-27"
+        ixz="-7.23102859997426E-27"
+        iyy="5.2602514824496E-11"
+        iyz="3.22372028374153E-15"
+        izz="7.20520299010003E-11" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://grasshopper_v13/meshes/lfj.STL" />
+      </geometry>
+      <material
+        name="green">
+        <color
+          rgba="0 1 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://grasshopper_v13/meshes/lfj.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint
+    name="lfj"
+    type="revolute">
+    <origin
+      xyz="0.038 0.005 0.003"
+      rpy="0 0 -3.1416" />
+    <parent
+      link="body" />
+    <child
+      link="lfj" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.2217"
+      upper="0.7854"
+      effort="10000"
+      velocity="10000" />
+  </joint>
+
+  <link
+    name="lft">
+    <inertial>
+      <origin
+        xyz="1.1504874067314E-08 -0.00371748629019261 0.0122946918253932"
+        rpy="0 0 0" />
+      <mass
+        value="3.51603367839938E-05" />
+      <inertia
+        ixx="1.91485515476314E-09"
+        ixy="-4.72559457814748E-16"
+        ixz="1.82459195624099E-15"
+        iyy="1.90949539974163E-09"
+        iyz="4.22635660721531E-11"
+        izz="6.60557062659622E-11" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://grasshopper_v13/meshes/lft.STL" />
+      </geometry>
+      <material
+        name="blue">
+        <color
+          rgba="0 0 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://grasshopper_v13/meshes/lft.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint
+    name="lft"
+    type="revolute">
+    <origin
+      xyz="0 -0.00350000000000001 0.002"
+      rpy="1.42891836152306 0 0" />
+    <parent
+      link="lfj" />
+    <child
+      link="lft" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-1.5708"
+      upper="0"
+      effort="10000"
+      velocity="10000" />
+  </joint>
+
+  <link
+    name="lfc">
+    <inertial>
+      <origin
+        xyz="0.0035298494694686 9.24416931891159E-11 0.0123459994095769"
+        rpy="0 0 0" />
+      <mass
+        value="3.55157212341989E-05" />
+      <inertia
+        ixx="1.9088942283652E-09"
+        ixy="5.07295647738847E-17"
+        ixz="-2.03228592058296E-11"
+        iyy="1.91507887950688E-09"
+        iyz="5.59201958691822E-17"
+        izz="6.24266557962309E-11" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://grasshopper_v13/meshes/lfc.STL" />
+      </geometry>
+      <material
+        name="red">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://grasshopper_v13/meshes/lfc.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint
+    name="lfc"
+    type="revolute">
+    <origin
+      xyz="0 -0.0038381732483522 0.0268708766362887"
+      rpy="0 -0.284344118061165 1.5707963267949" />
+    <parent
+      link="lft" />
+    <child
+      link="lfc" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-2.7838"
+      upper="0"
+      effort="10000"
+      velocity="10000" />
+  </joint>
+
+  <link
+    name="lff">
+    <inertial>
+      <origin
+        xyz="6.93889390390723E-18 1.73472347597681E-18 -0.000369435002616103"
+        rpy="0 0 0" />
+      <mass
+        value="0.000146440131734425" />
+      <inertia
+        ixx="7.15922484169963E-10"
+        ixy="2.58493941422821E-26"
+        ixz="7.27014210251684E-26"
+        iyy="7.15922484169963E-10"
+        iyz="1.29246970711411E-26"
+        izz="8.27670524201034E-10" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://grasshopper_v13/meshes/lff.STL" />
+      </geometry>
+      <material
+        name="cyan">
+        <color
+          rgba="0 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://grasshopper_v13/meshes/lff.STL" />
+      </geometry>
+    </collision>
+    <contact>
+      <friction_anchor/>
+      <stiffness value="3000.0"/>
+      <damping value="100.0"/>
+      <spinning_friction value=".3"/>
+      <lateral_friction value="1"/>
+    </contact>
+  </link>
+
+  <joint
+    name="lff"
+    type="fixed">
+    <origin
+      xyz="0.00358467875173176 0 0.024991154273188"
+      rpy="3.14159265358979 0 1.31216908789752" />
+    <parent
+      link="lfc" />
+    <child
+      link="lff" />
+    <axis
+      xyz="0.315437894143221 0.2024778035139 -0.927093131256335" />
+  </joint>
+
+  <link
+    name="rrt">
+    <inertial>
+      <origin
+        xyz="0.0261286982370065 -3.46944695195361E-18 0.00402879306534778"
+        rpy="0 0 0" />
+      <mass
+        value="0.00102510748433604" />
+      <inertia
+        ixx="2.75870829148051E-08"
+        ixy="5.25397806138035E-23"
+        ixz="6.37268406114554E-10"
+        iyy="3.79932578337789E-07"
+        iyz="4.50188280965408E-25"
+        izz="3.96599014649717E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://grasshopper_v13/meshes/rrt.STL" />
+      </geometry>
+      <material
+        name="blue">
+        <color
+          rgba="0 0 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://grasshopper_v13/meshes/rrt.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint
+    name="rrt"
+    type="revolute">
+    <origin
+      xyz="0.0015 -0.012 0.005"
+      rpy="-1.5708 0 3.1416" />
+    <parent
+      link="body" />
+    <child
+      link="rrt" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.5708"
+      upper="0"
+      effort="10000"
+      velocity="10000" />
+  </joint>
+
+  <link
+    name="rrc">
+    <inertial>
+      <origin
+        xyz="0.00392175874866659 -0.00249998654599893 0.0309242354329562"
+        rpy="0 0 0" />
+      <mass
+        value="0.000112847642201864" />
+      <inertia
+        ixx="3.9190550365337E-08"
+        ixy="2.18786057414228E-15"
+        ixz="-2.72935401195876E-10"
+        iyy="3.92148332472703E-08"
+        iyz="1.73601369098715E-14"
+        izz="2.5091785288782E-10" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://grasshopper_v13/meshes/rrc.STL" />
+      </geometry>
+      <material
+        name="red">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://grasshopper_v13/meshes/rrc.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint
+    name="rrc"
+    type="revolute">
+    <origin
+      xyz="0.075 0 0.00149999999999999"
+      rpy="-1.5707963267949 0 -1.50753487154835" />
+    <parent
+      link="rrt" />
+    <child
+      link="rrc" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-2.906"
+      upper="0"
+      effort="10000"
+      velocity="10000" />
+  </joint>
+
+  <link
+    name="rrf">
+    <inertial>
+      <origin
+        xyz="-1.73472347597681E-18 0 -0.000461910618212824"
+        rpy="0 0 0" />
+      <mass
+        value="0.000139426648488346" />
+      <inertia
+        ixx="6.73294093383948E-10"
+        ixy="-1.95408424977817E-29"
+        ixz="1.58327539121478E-25"
+        iyy="6.73294093383948E-10"
+        iyz="1.26835134038282E-26"
+        izz="8.02301277928669E-10" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://grasshopper_v13/meshes/rrf.STL" />
+      </geometry>
+      <material
+        name="cyan">
+        <color
+          rgba="0 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://grasshopper_v13/meshes/rrf.STL" />
+      </geometry>
+    </collision>
+    <contact>
+      <friction_anchor/>
+      <stiffness value="3000.0"/>
+      <damping value="100.0"/>
+      <spinning_friction value=".3"/>
+      <lateral_friction value="1"/>
+    </contact>
+  </link>
+
+  <joint
+    name="rrf"
+    type="fixed">
+    <origin
+      xyz="0.00401418502771377 -0.0025 0.0633692134386507"
+      rpy="-3.14159265358979 0 3.14159265358979" />
+    <parent
+      link="rrc" />
+    <child
+      link="rrf" />
+    <axis
+      xyz="-0.126185616463493 0 -0.992006648262867" />
+  </joint>
+
+  <link
+    name="rmj">
+    <inertial>
+      <origin
+        xyz="3.46944695195361E-18 -7.74711234624928E-06 0.0020000799283311"
+        rpy="0 0 0" />
+      <mass
+        value="1.34653649071667E-05" />
+      <inertia
+        ixx="5.52644557593085E-11"
+        ixy="-1.9516475894539E-27"
+        ixz="-1.49670709805117E-28"
+        iyy="5.2602514824496E-11"
+        iyz="3.22372028373248E-15"
+        izz="7.20520299010003E-11" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://grasshopper_v13/meshes/rmj.STL" />
+      </geometry>
+      <material
+        name="green">
+        <color
+          rgba="0 1 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://grasshopper_v13/meshes/rmj.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint
+    name="rmj"
+    type="revolute">
+    <origin
+      xyz="0.0195 -0.0125 0.003"
+      rpy="0 0 0" />
+    <parent
+      link="body" />
+    <child
+      link="rmj" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.95993"
+      upper="1.3963"
+      effort="10000"
+      velocity="10000" />
+  </joint>
+
+  <link
+    name="rmt">
+    <inertial>
+      <origin
+        xyz="1.17369587208926E-08 -0.00371957814414213 0.0127870738369718"
+        rpy="0 0 0" />
+      <mass
+        value="3.66110273362851E-05" />
+      <inertia
+        ixx="2.14579823191614E-09"
+        ixy="-5.097674599054E-16"
+        ixz="1.98141479303397E-15"
+        iyy="2.14027534320085E-09"
+        iyz="4.42338956091423E-11"
+        izz="6.85266000169758E-11" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://grasshopper_v13/meshes/rmt.STL" />
+      </geometry>
+      <material
+        name="blue">
+        <color
+          rgba="0 0 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://grasshopper_v13/meshes/rmt.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint
+    name="rmt"
+    type="revolute">
+    <origin
+      xyz="0 -0.00349999999999999 0.002"
+      rpy="1.43394443199086 0 0" />
+    <parent
+      link="rmj" />
+    <child
+      link="rmt" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-1.5708"
+      upper="0"
+      effort="10000"
+      velocity="10000" />
+  </joint>
+
+  <link
+    name="rmc">
+    <inertial>
+      <origin
+        xyz="0.00352224660212594 2.16806371466927E-10 0.0123365587699098"
+        rpy="0 0 0" />
+      <mass
+        value="3.5661712321329E-05" />
+      <inertia
+        ixx="1.90974195045752E-09"
+        ixy="6.36553243003799E-17"
+        ixz="-2.09464842306822E-11"
+        iyy="1.91637355644094E-09"
+        iyz="8.0880479166653E-17"
+        izz="6.29888137193371E-11" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://grasshopper_v13/meshes/rmc.STL" />
+      </geometry>
+      <material
+        name="red">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://grasshopper_v13/meshes/rmc.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint
+    name="rmc"
+    type="revolute">
+    <origin
+      xyz="0 -0.0038381732483522 0.0278708766362887"
+      rpy="0 -0.279318047593364 1.5707963267949" />
+    <parent
+      link="rmt" />
+    <child
+      link="rmc" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-2.7838"
+      upper="0"
+      effort="10000"
+      velocity="10000" />
+  </joint>
+
+  <link
+    name="rmf">
+    <inertial>
+      <origin
+        xyz="-3.46944695195361E-18 8.67361737988404E-19 -0.000369435002616089"
+        rpy="0 0 0" />
+      <mass
+        value="0.000146440131734425" />
+      <inertia
+        ixx="7.15922484169963E-10"
+        ixy="0"
+        ixz="-8.72417052302021E-26"
+        iyy="7.15922484169964E-10"
+        iyz="1.09859925104699E-25"
+        izz="8.27670524201034E-10" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://grasshopper_v13/meshes/rmf.STL" />
+      </geometry>
+      <material
+        name="cyan">
+        <color
+          rgba="0 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://grasshopper_v13/meshes/rmf.STL" />
+      </geometry>
+    </collision>
+    <contact>
+      <friction_anchor/>
+      <stiffness value="3000.0"/>
+      <damping value="100.0"/>
+      <spinning_friction value=".3"/>
+      <lateral_friction value="1"/>
+    </contact>
+  </link>
+
+  <joint
+    name="rmf"
+    type="fixed">
+    <origin
+      xyz="0.00358467875173177 0 0.024991154273188"
+      rpy="-3.14159265358979 0 -1.06968702280819" />
+    <parent
+      link="rmc" />
+    <child
+      link="rmf" />
+    <axis
+      xyz="0.543800344791726 -0.00293181392776692 -0.839209502729499" />
+  </joint>
+
+  <link
+    name="rfj">
+    <inertial>
+      <origin
+        xyz="-4.16333634234434E-17 -7.74711234625535E-06 0.0020000799283311"
+        rpy="0 0 0" />
+      <mass
+        value="1.34653649071667E-05" />
+      <inertia
+        ixx="5.52644557593085E-11"
+        ixy="-1.94644749785624E-27"
+        ixz="-1.48968825401143E-28"
+        iyy="5.2602514824496E-11"
+        iyz="3.22372028373242E-15"
+        izz="7.20520299010003E-11" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://grasshopper_v13/meshes/rfj.STL" />
+      </geometry>
+      <material
+        name="green">
+        <color
+          rgba="0 1 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://grasshopper_v13/meshes/rfj.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint
+    name="rfj"
+    type="revolute">
+    <origin
+      xyz="0.0380000000000001 -0.00500000000000007 0.003"
+      rpy="0 0 0" />
+    <parent
+      link="body" />
+    <child
+      link="rfj" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.7854"
+      upper="1.2217"
+      effort="10000"
+      velocity="10000" />
+  </joint>
+
+  <link
+    name="rft">
+    <inertial>
+      <origin
+        xyz="1.15048741158863E-08 -0.00371748629019268 0.0122946918253931"
+        rpy="0 0 0" />
+      <mass
+        value="3.51603367839939E-05" />
+      <inertia
+        ixx="1.91485515476314E-09"
+        ixy="-4.72559457551865E-16"
+        ixz="1.82459194594638E-15"
+        iyy="1.90949539974164E-09"
+        iyz="4.22635660721527E-11"
+        izz="6.60557062659624E-11" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://grasshopper_v13/meshes/rft.STL" />
+      </geometry>
+      <material
+        name="blue">
+        <color
+          rgba="0 0 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://grasshopper_v13/meshes/rft.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint
+    name="rft"
+    type="revolute">
+    <origin
+      xyz="0 -0.0035 0.002"
+      rpy="1.42891836152306 0 0" />
+    <parent
+      link="rfj" />
+    <child
+      link="rft" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-1.5708"
+      upper="0"
+      effort="10000"
+      velocity="10000" />
+  </joint>
+
+  <link
+    name="rfc">
+    <inertial>
+      <origin
+        xyz="0.00352984946946859 9.24417070669037E-11 0.012345999409577"
+        rpy="0 0 0" />
+      <mass
+        value="3.55157212341991E-05" />
+      <inertia
+        ixx="1.90889422836521E-09"
+        ixy="5.0729564804038E-17"
+        ixz="-2.03228592058292E-11"
+        iyy="1.91507887950688E-09"
+        iyz="5.59201988036956E-17"
+        izz="6.24266557962314E-11" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://grasshopper_v13/meshes/rfc.STL" />
+      </geometry>
+      <material
+        name="red">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://grasshopper_v13/meshes/rfc.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint
+    name="rfc"
+    type="revolute">
+    <origin
+      xyz="0 -0.00383817324835235 0.0268708766362886"
+      rpy="0 -0.284344118061165 1.5707963267949" />
+    <parent
+      link="rft" />
+    <child
+      link="rfc" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-2.7838"
+      upper="0"
+      effort="10000"
+      velocity="10000" />
+  </joint>
+
+  <link
+    name="rff">
+    <inertial>
+      <origin
+        xyz="0 0 -0.00036943500261611"
+        rpy="0 0 0" />
+      <mass
+        value="0.000146440131734425" />
+      <inertia
+        ixx="7.15922484169963E-10"
+        ixy="5.16987882845642E-26"
+        ixz="-1.1632227364027E-25"
+        iyy="7.15922484169963E-10"
+        iyz="-6.78546596234906E-26"
+        izz="8.27670524201034E-10" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://grasshopper_v13/meshes/rff.STL" />
+      </geometry>
+      <material
+        name="cyan">
+        <color
+          rgba="0 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://grasshopper_v13/meshes/rff.STL" />
+      </geometry>
+    </collision>
+    <contact>
+      <friction_anchor/>
+      <stiffness value="3000.0"/>
+      <damping value="100.0"/>
+      <spinning_friction value=".3"/>
+      <lateral_friction value="1"/>
+    </contact>
+  </link>
+
+  <joint
+    name="rff"
+    type="fixed">
+    <origin
+      xyz="0.00358467875173169 0 0.024991154273188"
+      rpy="-3.14159265358979 0 -0.499594953248322" />
+    <parent
+      link="rfc" />
+    <child
+      link="rff" />
+    <axis
+      xyz="0.598726421418585 0.663097935403218 -0.449252490654514" />
+  </joint>
+
+</robot>
