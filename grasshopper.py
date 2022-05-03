@@ -10,9 +10,9 @@ g = 9.81
 p.connect(p.GUI)
 p.setGravity(0, 0, -g)
 p.setAdditionalSearchPath(pybullet_data.getDataPath())
-plane = p.loadURDF('plane.urdf')
+plane = p.loadURDF('plane.urdf') # No need to be edited
 grasshopper = p.loadURDF('C:/Users/41725/Desktop/grasshopper_v16/urdf/'
-                         'grasshopper_v16.urdf', basePosition=[0, 0, 0.15])
+                         'grasshopper_v16.urdf', basePosition=[0, 0, 0.15])  # Don't forget to change this
 
 setup = grasshopper_initial_setup.setup(grasshopper)
 
