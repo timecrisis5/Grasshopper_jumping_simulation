@@ -1,4 +1,4 @@
-# This script is used to adjust the orientation of each joint of the grasshopper
+# This script is used to adjust the orientation (position? angle) of each joint of the grasshopper
 
 PI: float = 3.1415926535897932384626
 
